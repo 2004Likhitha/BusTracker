@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Tracker-Register</title>
+    <link rel="icon" type="image/x-icon" href="favicon2.png" width="100px" height="100px">
+    <style>
+        /* Your CSS rules can go here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+             background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: black;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* ... (existing CSS styles) ... */
+
+        .register {
+            width: 500px;
+            height:700px;
+            margin:auto;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+Backdrop-filter:blur(15px);
+            background:rgba(255,255,255,0.2);
+        }
+        .register h2 {
+            text-align: center;
+        }
+
+        .register-form {
+            margin-top: 20px;
+        }
+
+       .register-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .register-form input {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .register-form button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body background="header.jpg">
+    <header>
+        <h1>Welcome to Bus Tracker</h1>
+    </header>
+    </br>
+    </br>
+    <div class="register 1" style="float:left;">
+        <h2><center>SEARCH FROM AND TO</center></h2>
+        <form class="register-form" action="map.html" method="post">
+<label for="fname"><h3>From:</h3></label>
+            <input type="text" id="fname" name="fname" required><br>
+<label for="lname"><h3>To:</h3></label>
+            <input type="text" id="lname" name="lname" required><br>
+
+<center><button type="submit">Search Bus</button></br></br>
+            </center>
+        </form>
+    </div>
+    <div class="register 2" style="float:right;">
+        <h2><center>SEARCH BY ROUTE NUMBER</center></h2>
+        <form class="register-form" action="map.html" method="post">
+<label for="fname">Route number:</label>
+            <input type="text" id="fname" name="fname" required><br>
+
+<center><button type="submit" onclick="document.location='map.html'">Search Bus</button></br></br>
+            </center>
+<b>Route Number</b>
+<hr>
+1<hr>1/251<hr>10KM/224G<hr>219<hr>218<hr>224G<hr>218C<hr>220G<hr>221G<hr>222A<hr>224<hr>224/219<hr>224G/219<hr>234R
+        </form>
+    </div>
+</body>
+<script>
+    function validateForm() {     
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Simple validation for required fields
+      if (username === '' || password === '') {
+        alert('Please fill in all fields');
+        return false;
+      }
+
+      window.location.href = 'home.html';
+      return true;
+    }
+  </script>
+
+</html>

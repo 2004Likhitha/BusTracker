@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Tracker-Register</title>
+    <link rel="icon" type="image/x-icon" href="favicon2.png" width="100px" height="100px">
+    <style>
+        /* Your CSS rules can go here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: black;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* ... (existing CSS styles) ... */
+
+        .register {
+            width: 500px;
+            height:700px;
+            margin:auto;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+Backdrop-filter:blur(15px);
+            background:rgba(255,255,255,0.2);
+        }
+        .register h2 {
+            text-align: center;
+        }
+
+        .register-form {
+            margin-top: 20px;
+        }
+
+       .register-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .register-form input {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .register-form button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body background="headerbgpic.jpg">
+    <header>
+        <h1>Welcome to Bus Tracker</h1>
+    </header>
+    </br>
+    </br>
+    <div class="register 1">
+        <form class="register-form" action="login.html" method="post" onsubmit="return validateForm()>
+<label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" required><br>
+<label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" required><br>
+<label for="dob">Date Of Birth:</label>
+            <input type="date" id="dob" name="dob" required> <br>
+<label for="phno">Phone Number:</label>
+            <input type="number" id="phno" name="phno" required><br>
+<label for="email">E-mail ID:</label>
+            <input type="email" id="email" name="email" required> <br>          
+<label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password1">Create Password:</label>
+            <input type="password" id="password1" name="password1" required><br>
+
+            <label for="password2">Confirm Password:</label>
+            <input type="password" id="password2" name="password2" required><br>
+
+<center><button type="submit">REGISTER</button></br></br>
+            </center>
+        </form>
+    </div>
+   
+</body>
+<script>
+    function validateForm() {
+      const first = document.getElementById('fname').value;
+      const last = document.getElementById('lname').value;
+      const dob = document.getElementById('dob').value;
+      const phno = document.getElementById('phno').value;      
+      const username = document.getElementById('username').value;
+      const email = document.getElementById('email').value;
+      const password1 = document.getElementById('password1').value;
+      const password2 = document.getElementById('password2').value;
+
+      // Simple validation for required fields
+      if (username === '' || email === '' || password1 === '' || password2 === '' || fname === '' || lname === '' || phno === '' || dob === '') {
+        alert('Please fill in all fields');
+        return false;
+      }
+
+      // Validate password match
+      if (password1 !== password2) {
+        alert('Passwords do not match');
+        return false;
+      }
+
+      window.location.href = 'login.html';
+      return true;
+    }
+</script>
+</html>

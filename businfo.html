@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Information</title>
+  <style>
+    /* Add some basic styling for better presentation */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: powderblue; /* Set a background color */
+    }
+header {
+            background-color: black;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    button {
+      display: block;
+      width: 200px; /* Set the width of all buttons */
+      padding: 10px;
+      margin: 5px 0;
+      font-size: 16px;
+      background-color: #3498db; /* Set the blue color */
+      color: #fff; /* Set text color to white */
+      border: none;
+      cursor: pointer;
+      1px linear-gradient(transparent,#0005);
+      box-shadow:0 0 5px #03e9f4,0 0 15px #03e9f4,0 0 25px #03e9f4,0 0 100px #03e9f4;
+    }
+    button:hover {
+      background-color: #2980b9; /* Darker blue on hover */
+    }
+    #infoDisplay {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+ <header>
+        <h1>Welcome to Bus Tracker</h1>
+    </header><br>
+<center>
+  <button onclick="displayInfo('pallevelugu')">Pallevelugu</button><br>
+  <button onclick="displayInfo('cityordinary')">City Ordinary</button><br>
+  <button onclick="displayInfo('luxury')">Metro Luxury</button><br>
+  <button onclick="displayInfo('metroexpress')">Metro Express</button><br>
+  <button onclick="displayInfo('superluxury')">Super Luxury</button>
+
+  <div id="infoDisplay"></div>
+
+  <script>
+    function displayInfo(busType) {
+      var infoDisplay = document.getElementById('infoDisplay');
+      var info = '';
+
+      // Set information based on the clicked button
+      switch (busType) {
+        case 'pallevelugu':
+          info = 'Pallevelugu buses are not air-conditioned but consist of ergonomic seats. Seats get filled up in Pallevelugu buses, and they offer frequent transfers within the state. TSRTC also operates a few coaches under the banner of Semi-Pallevelugu. These are similar to Pallevelugu buses operated in Telangana. Both Pallevelugu and Semi Pallevelugu buses have ordinary fares, so everyone can afford them. One can visit the official website of TSRTC to understand more about Pallevelugu and Semi-Pallevelugu buses.';
+          break;
+        case 'cityordinary':
+          info = 'These are ordinary buses without any air conditioners in Telangana. However, these buses have ergonomic seats and spacious interiors for passengers in Telangana. Since City Ordinary buses are widely used for local transportation, handholds are available for passengers. If the seats are full in a City Ordinary bus, passengers travelling for short distances can stand and grab the handholds. Sliding windows are also installed inside City Ordinary buses by TSRTC. Passengers can slide the bus window according to their comfort and requirement. Also, the fare of City Ordinary buses by TSRTC is affordable for everyone in the society.';
+          break;
+        case 'luxury':
+          info = 'Metro Luxury buses are offered by TSRTC for metropolitan areas like Hyderabad. These are AC buses with low floors and ample space. Daily commuters or office goers might not even sit in Metro Luxury buses for a short distance. They simply stand and grab the handholds places at frequent distances inside Metro Luxury buses. The seating arrangement of Metro Luxury buses is 2+2. However, some distance is left towards the back door of the bus for passengers to get in and off faster. If you are looking to travel short distances in metropolitan regions, Metro Luxury buses are the right choice.';
+          break;
+        case 'metroexpress':
+          info = 'Metro Express buses are non-AC coaches operated by TSRTC. Since there is no air conditioning on a Metro Express coach, the fare is slightly less than that of Metro Luxury buses. These buses also have spacious interiors for passengers to get in and off quickly. For local transportation within metro locations, Metro Express buses are a good choice. Also, you will not dig a hole in your pockets while travelling on a TSRTC Metro Express bus. Keep your phone charged when travelling on a Metro Express bus by TSRTC. You might not find a charging point on a Metro Express bus.';
+          break;
+        case 'superluxury':
+          info = 'Super Luxury buses by TSRTC also offer a central TV onboard for passengers. Passengers can enjoy movies or songs while travelling on the Super Luxury bus by TSRTC. TSRTC does not compromise passenger safety in any of its services. For the same rationale, Super Luxury buses are also fitted with an air suspension system. It will help passengers to have a jerk-free travel experience in Telangana. The floor of Super Luxury buses is made of a vinyl mat for increased grip. These buses have a 2+2 seating arrangement and abundant legroom for commuters. One can view more details about a TSRTC Super Luxury bus on redBus.';
+          break;
+        default:
+          info = 'No information available.';
+          break;
+      }
+
+      // Display information in the infoDisplay div
+      infoDisplay.innerHTML = '<h2>' + busType.toUpperCase() + '</h2>' + '<p>' + info + '</p>';
+    }
+  </script>
+
+</body>
+</html>
